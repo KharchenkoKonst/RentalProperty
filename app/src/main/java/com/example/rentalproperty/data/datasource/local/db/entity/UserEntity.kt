@@ -1,4 +1,4 @@
-package com.example.rentalproperty.data.db.entity
+package com.example.rentalproperty.data.datasource.local.db.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

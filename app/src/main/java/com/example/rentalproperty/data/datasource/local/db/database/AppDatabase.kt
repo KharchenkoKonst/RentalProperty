@@ -1,11 +1,11 @@
-package com.example.rentalproperty.data.db.database
+package com.example.rentalproperty.data.datasource.local.db.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.rentalproperty.data.db.dao.UserDao
-import com.example.rentalproperty.data.db.entity.UserEntity
+import com.example.rentalproperty.data.datasource.local.db.dao.UserDao
+import com.example.rentalproperty.data.datasource.local.db.entity.UserEntity
 
 @Database(entities = [UserEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

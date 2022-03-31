@@ -1,9 +1,14 @@
 package com.example.rentalproperty.domain.repository
 
-import androidx.lifecycle.LiveData
+import com.example.rentalproperty.data.datasource.network.api.model.UserDto
 import com.example.rentalproperty.domain.model.User
+import com.example.rentalproperty.domain.model.UserAuthenticate
 
 interface UserRepository {
 
-    fun getUserById(id: Int): LiveData<User>
+    suspend fun getSavedUser(): User?
+    suspend fun validateUser(user: User): UserAuthenticate
+    suspend fun registerUser(user: User): Int
+    suspend fun loginUser(user: User): UserDto?
+
 }

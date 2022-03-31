@@ -1,17 +1,15 @@
-package com.example.rentalproperty.data.db.dao
+package com.example.rentalproperty.data.datasource.local.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.rentalproperty.data.db.entity.UserEntity
+import com.example.rentalproperty.data.datasource.local.db.entity.UserEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM user WHERE id = :id")
-    suspend fun getById(id: Int): LiveData<UserEntity>
-
     @Query("SELECT * FROM user")
-    fun getAll(): LiveData<List<UserEntity>>
+    suspend fun getAll(): List<UserEntity>
 
     @Insert
     suspend fun insert(user: UserEntity)

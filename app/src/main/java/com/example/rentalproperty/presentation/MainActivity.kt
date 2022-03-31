@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
 
     private var binding: ActivityMainBinding? = null
     private val viewModel: MainActivityViewModel by viewModels {
-        MainActivityViewModelFactory(appComponent.userInteractor)
+        MainActivityViewModelFactory(
+            appComponent.userInteractor
+        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

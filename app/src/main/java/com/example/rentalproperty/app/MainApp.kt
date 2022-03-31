@@ -5,6 +5,7 @@ import android.content.Context
 import com.example.rentalproperty.BuildConfig
 import com.example.rentalproperty.di.AppComponent
 import com.example.rentalproperty.di.DaggerAppComponent
+import com.example.rentalproperty.di.module.ContextModule
 import timber.log.Timber
 
 class MainApp : Application() {
@@ -13,7 +14,10 @@ class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent
+            .builder()
+            .contextModule(ContextModule(applicationContext))
+            .build()
 
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())

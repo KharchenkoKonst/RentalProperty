@@ -7,9 +7,13 @@ import com.example.rentalproperty.presentation.viewmodel.MainActivityViewModel
 import javax.inject.Inject
 
 @Suppress("UNCHECKED_CAST")
-class MainActivityViewModelFactory @Inject constructor(private val userInteractor: UserInteractor) :
+class MainActivityViewModelFactory @Inject constructor(
+    private val userInteractor: UserInteractor
+) :
     ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T =
-        MainActivityViewModel(userInteractor) as T
+        MainActivityViewModel(
+            userInteractor
+        ) as T
 }
