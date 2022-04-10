@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate_graph"
+    app:startDestination="@id/starterFragment">
+
+    <fragment
+        android:id="@+id/advertisementPreviewFragment"
+        android:name="com.example.rentalproperty.presentation.view.AdvertisementPreviewFragment"
+        android:label="AdvertisementPreviewFragment"
+        tools:layout="@layout/advertisement_preview_fragment" />
+    <fragment
+        android:id="@+id/advertisementCreateFragment"
+        android:name="com.example.rentalproperty.presentation.view.AdvertisementCreateFragment"
+        android:label="AdvertisementCreateFragment"
+        tools:layout="@layout/advertisement_create_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.rentalproperty.presentation.view.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_advertisementPreviewFragment"
+            app:destination="@id/advertisementPreviewFragment"
+            app:popUpTo="@id/advertisementPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/starterFragment"
+        android:name="com.example.rentalproperty.presentation.view.StarterFragment"
+        android:label="starter_fragment"
+        tools:layout="@layout/starter_fragment">
+        <action
+            android:id="@+id/action_starterFragment_to_advertisementPreviewFragment"
+            app:destination="@id/advertisementPreviewFragment"
+            app:popUpTo="@id/advertisementPreviewFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_starterFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

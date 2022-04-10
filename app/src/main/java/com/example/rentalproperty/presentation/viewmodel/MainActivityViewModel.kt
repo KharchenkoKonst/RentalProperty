@@ -1,21 +1,23 @@
 package com.example.rentalproperty.presentation.viewmodel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import com.example.rentalproperty.domain.interactor.AdvertisementInteractor
 import com.example.rentalproperty.domain.interactor.UserInteractor
-import com.example.rentalproperty.domain.model.User
-import com.example.rentalproperty.domain.model.UserAuthenticate
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import timber.log.Timber
-import javax.inject.Inject
 
-class MainActivityViewModel @Inject constructor(
-    private val userInteractor: UserInteractor
+class MainActivityViewModel(
+    private val userInteractor: UserInteractor,
+    private val advertisementInteractor: AdvertisementInteractor
 ) : ViewModel() {
 
-    val isAuthenticated = MutableLiveData<Boolean>()
+/*
+
+    fun loadAdvertisements() {
+        viewModelScope.launch(Dispatchers.IO) {
+//            advertisementInteractor.getAdvertisements()
+            delay(2000)
+            isAuthenticated.postValue(false)
+        }
+    }
 
     fun tryAuthenticate() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -25,16 +27,28 @@ class MainActivityViewModel @Inject constructor(
                         Timber.e("Authorized")
                     }
                     UserAuthenticate.NotAuthenticate -> {
-                        /**
-                         * Сценарий регистрации
-                         */
+                        isAuthenticated.postValue(false)
+*/
+/*
+                        *//*
+
+*/
+    /**
+     * Сценарий регистрации
+     *//*
+*/
+/*
+
                         val username = "username"
                         val password = "password"
                         val user = User(username, password)
                         Timber.e(userInteractor.register(user).toString())
+*//*
+
                     }
                 }
             }
         }
     }
+*/
 }

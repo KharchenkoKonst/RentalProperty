@@ -11,6 +11,9 @@ interface UserDao {
     @Query("SELECT * FROM user")
     suspend fun getAll(): List<UserEntity>
 
+    @Query("DELETE FROM user")
+    suspend fun deleteAll()
+
     @Insert
     suspend fun insert(user: UserEntity)
 

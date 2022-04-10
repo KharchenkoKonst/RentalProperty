@@ -8,7 +8,7 @@ interface UserRepository {
 
     suspend fun getSavedUser(): User?
     suspend fun validateUser(user: User): UserAuthenticate
-    suspend fun registerUser(user: User): Int
-    suspend fun loginUser(user: User): UserDto?
+    suspend fun registerUser(user: User): UserAuthenticate
+    suspend fun loginUser(user: User): UserAuthenticate
 
 }

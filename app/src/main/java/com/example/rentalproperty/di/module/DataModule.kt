@@ -1,6 +1,8 @@
 package com.example.rentalproperty.di.module
 
+import com.example.rentalproperty.data.repository.AdvertisementRepositoryImpl
 import com.example.rentalproperty.data.repository.UserRepositoryImpl
+import com.example.rentalproperty.domain.repository.AdvertisementRepository
 import com.example.rentalproperty.domain.repository.UserRepository
 import dagger.Binds
 import dagger.Module
@@ -18,5 +20,11 @@ interface DataBindsModule {
     fun bindUserRepository(
         userRepositoryImpl: UserRepositoryImpl
     ): UserRepository
+
+    @Binds
+    @Singleton
+    fun provideAdvertisementRepository(
+        advertisementRepositoryImpl: AdvertisementRepositoryImpl
+    ): AdvertisementRepository
 
 }

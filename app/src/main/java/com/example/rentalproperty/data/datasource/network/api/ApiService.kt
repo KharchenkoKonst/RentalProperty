@@ -1,5 +1,6 @@
 package com.example.rentalproperty.data.datasource.network.api
 
+import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementDto
 import com.example.rentalproperty.data.datasource.network.api.model.UserDto
 import com.example.rentalproperty.data.datasource.network.api.model.ValidationDto
 import retrofit2.Response
@@ -24,6 +25,11 @@ interface ApiService {
     suspend fun loginUser(
         @Body userDto: UserDto
     ): Response<UserDto>
+
+    @GET("api/v1/advertisements/getAll")
+    suspend fun getAdvertisements(
+        @Header("Authorization") token: String
+    ): Response<List<AdvertisementDto>>
 
     companion object {
 

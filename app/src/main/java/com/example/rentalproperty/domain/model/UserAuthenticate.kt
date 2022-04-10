@@ -6,4 +6,7 @@ sealed class UserAuthenticate {
 
     object NotAuthenticate : UserAuthenticate()
 
+    object NotRegistered : UserAuthenticate()
+
+    object SuccessRegister: UserAuthenticate()
 }
