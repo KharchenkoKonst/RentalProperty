@@ -8,6 +8,7 @@ import com.example.rentalproperty.domain.interactor.AdvertisementInteractor
 import com.example.rentalproperty.domain.model.Advertisement
 import com.example.rentalproperty.utils.SingleLiveEvent
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.lang.Exception
 
 class AdvertisementPreviewViewModel(
@@ -16,6 +17,10 @@ class AdvertisementPreviewViewModel(
 
     val advertisements = MutableLiveData<List<Advertisement>>()
     val requireAuthorization = SingleLiveEvent<Unit>()
+
+    init {
+        print("")
+    }
 
     fun loadAdvertisements() {
         viewModelScope.launch {

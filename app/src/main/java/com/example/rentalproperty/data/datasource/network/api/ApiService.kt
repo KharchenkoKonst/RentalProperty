@@ -1,20 +1,12 @@
 package com.example.rentalproperty.data.datasource.network.api
 
-import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementDto
+import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementRequestDto
+import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementResponseDto
 import com.example.rentalproperty.data.datasource.network.api.model.UserDto
-import com.example.rentalproperty.data.datasource.network.api.model.ValidationDto
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
-
-    @GET("api/v1/auth/validate")
-    suspend fun validateUser(
-        @Header("Authorization") token: String
-    ): Response<ValidationDto>
 
     @POST("api/v1/auth/register")
     suspend fun registerUser(
@@ -26,10 +18,16 @@ interface ApiService {
         @Body userDto: UserDto
     ): Response<UserDto>
 
-    @GET("api/v1/advertisements/getAll")
+    @GET("api/v1/advertisements")
     suspend fun getAdvertisements(
         @Header("Authorization") token: String
-    ): Response<List<AdvertisementDto>>
+    ): Response<List<AdvertisementResponseDto>>
+
+    @POST("api/v1/advertisements")
+    suspend fun uploadAdvertisement(
+        @Header("Authorization") token: String,
+        @Body advertisementRequestDto: AdvertisementRequestDto
+    ): Response<Void>
 
     companion object {
 

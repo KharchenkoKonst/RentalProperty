@@ -1,7 +1,8 @@
 package com.example.rentalproperty.data.mapper
 
 import com.example.rentalproperty.data.datasource.local.db.entity.UserEntity
-import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementDto
+import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementRequestDto
+import com.example.rentalproperty.data.datasource.network.api.model.AdvertisementResponseDto
 import com.example.rentalproperty.data.datasource.network.api.model.UserDto
 import com.example.rentalproperty.domain.model.Advertisement
 import com.example.rentalproperty.domain.model.User
@@ -23,6 +24,12 @@ fun UserDto.toUserEntity() = UserEntity(
     accessToken = token
 )
 
-fun AdvertisementDto.toAdvertisement() = Advertisement(
-    region = this.region
+fun AdvertisementResponseDto.toAdvertisement() = Advertisement(
+    region = this.region,
+    imagesUrl = this.imagesUrl
+)
+
+fun Advertisement.toAdvertisementDtoRequest() = AdvertisementRequestDto(
+    region = this.region,
+    images = this.imagesStream?.map { it.readBytes() }.orEmpty()
 )

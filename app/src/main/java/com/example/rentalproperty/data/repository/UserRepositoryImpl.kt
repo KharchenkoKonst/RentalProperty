@@ -19,9 +19,6 @@ class UserRepositoryImpl @Inject constructor(
             networkDataSource.accessToken = it?.accessToken
         }
 
-    override suspend fun validateUser(user: User): UserAuthenticate =
-        networkDataSource.validateUser(user)
-
     override suspend fun registerUser(user: User): UserAuthenticate =
         networkDataSource.registerUser(user)
 

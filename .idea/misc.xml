@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/drawable/ic_sort.xml" value="0.288" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/advertisement_create_fragment.xml" value="0.11639492753623189" />
-        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/advertisement_preview_fragment.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/advertisement_item.xml" value="0.33" />
+        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/advertisement_preview_fragment.xml" value="0.25" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/advertisements_fragment.xml" value="0.3296875" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/create_advertisement.xml" value="0.315625" />
+        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/item_sort.xml" value="0.5" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/loader_fragement.xml" value="0.22" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/loader_fragment.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/loading_fragment.xml" value="0.29528985507246375" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/login_fragment.xml" value="0.3296875" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/main_fragment.xml" value="0.315625" />
+        <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/layout/starter_fragment.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/khars/AndroidStudioProjects/RentalProperty/app/src/main/res/menu/nav_bottom.xml" value="0.315625" />
       </map>
     </option>

@@ -1,6 +1,5 @@
 package com.example.rentalproperty.data.repository
 
-import com.example.rentalproperty.app.UnauthorizedException
 import com.example.rentalproperty.data.datasource.local.LocalDataSource
 import com.example.rentalproperty.data.datasource.network.NetworkDataSource
 import com.example.rentalproperty.data.mapper.toAdvertisement
@@ -15,4 +14,8 @@ class AdvertisementRepositoryImpl @Inject constructor(
 
     override suspend fun getAdvertisements(): List<Advertisement> =
         networkDataSource.downloadAdvertisements()?.map { it.toAdvertisement() }.orEmpty()
+
+    override suspend fun publishAdvertisement(advertisement: Advertisement) {
+        networkDataSource.uploadAdvertisement(advertisement)
+    }
 }

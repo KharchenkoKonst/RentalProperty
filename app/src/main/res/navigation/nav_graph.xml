@@ -23,7 +23,7 @@
         <action
             android:id="@+id/action_loginFragment_to_advertisementPreviewFragment"
             app:destination="@id/advertisementPreviewFragment"
-            app:popUpTo="@id/advertisementPreviewFragment"
+            app:popUpTo="@id/navigate_graph"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -34,13 +34,13 @@
         <action
             android:id="@+id/action_starterFragment_to_advertisementPreviewFragment"
             app:destination="@id/advertisementPreviewFragment"
-            app:popUpTo="@id/advertisementPreviewFragment"
+            app:popUpTo="@id/navigate_graph"
             app:popUpToInclusive="true" />
 
         <action
             android:id="@+id/action_starterFragment_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpTo="@id/loginFragment"
+            app:popUpTo="@id/navigate_graph"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

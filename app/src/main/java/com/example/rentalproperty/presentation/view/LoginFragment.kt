@@ -28,7 +28,10 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = LoginFragmentBinding.inflate(inflater).also {
         binding = it
-        (requireActivity() as MainActivity).hideLoader()
+        (requireActivity() as MainActivity).run {
+            hideLoader()
+            hideBottomNavigator()
+        }
         setButtonsListeners()
         subscribeOnVM()
     }.root

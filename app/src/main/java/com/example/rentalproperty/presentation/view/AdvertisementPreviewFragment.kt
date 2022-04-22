@@ -1,5 +1,6 @@
 package com.example.rentalproperty.presentation.view
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.rentalproperty.R
 import com.example.rentalproperty.app.appComponent
 import com.example.rentalproperty.databinding.AdvertisementPreviewFragmentBinding

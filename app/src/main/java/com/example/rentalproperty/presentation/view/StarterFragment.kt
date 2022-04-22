@@ -36,7 +36,7 @@ class StarterFragment : Fragment() {
             findNavController().navigate(R.id.action_starterFragment_to_loginFragment)
         }
         viewModel.loadAdvertisements.observe(viewLifecycleOwner) {
-            findNavController().navigate(R.id.advertisementPreviewFragment)
+            findNavController().navigate(R.id.action_starterFragment_to_advertisementPreviewFragment)
 
         }
     }

@@ -11,4 +11,7 @@ class AdvertisementInteractor @Inject constructor(
     suspend fun getAdvertisements(): List<Advertisement> =
         advertisementRepository.getAdvertisements()
 
+    suspend fun publishAdvertisement(advertisement: Advertisement) {
+        advertisementRepository.publishAdvertisement(advertisement)
+    }
 }
